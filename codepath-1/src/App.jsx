@@ -1,34 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import Card from './components/Card'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="App">
+      <h1>Obon Festivals</h1>
+      <div className="card-container">
+        <h2>June: </h2>
+        <div className="month-container">
+          <Card name='Venice Japanese Community Center' date="June 21 - 22" link="https://www.vjcc.com/upcoming-events"/>
+          <Card name='West Covina Buddhist Temple' date="June 28" link="https://livingdharma.org/index.php/our-temple/upcoming-events/"/>
+          <Card name='San Fernando Valley Hongwanji Buddhist Temple' date="June 28 - 29" link="https://www.sfvhbt.org/obon-festival/"/>
+        </div>
+        <h2>July: </h2>
+        <div className="month-container">
+           <Card name='Senshin Buddhist Temple' date="July 5" link="https://senshintemple.org/obon/"/>
+          <Card name='Oxnard Buddhist Temple' date="July 12" link="https://www.oxnardbuddhisttemple.org/activities/calendar"/>
+          <Card name='Pasadena Buddhist Temple' date="July 19" link="https://www.pasadenabuddhisttemple.org/calendar.html"/>
+          <Card name='Venice Hongwanji Buddhist Temple' date="July 19 - 20" link="https://vhbt.org/calendar/"/>
+          <Card name='Higashi Hongwanji Buddhist Temple' date="July 26 - 27" link="https://hhbt-la.org/?p=216"/>
+          <Card name='West Los Angeles Buddhist Temple' date="July 26 - 27" link="https://www.wlabt.org/obon-festival"/>
+        </div>
+        <h2>August: </h2>
+        <div className="month-container">
+          <Card name='Gardena Buddhist Temple' date="August 2 - 3" link="https://www.gardenabuddhistchurch.org/upcoming-events"/>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
